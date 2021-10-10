@@ -13,9 +13,12 @@ public class MoodAnalyser {
 
     public String analyseMood() throws MoodAnalysisException {
 
-        try {
+
             if(mood==null){
                 throw new  MoodAnalysisException("Value cannot be null");
+            }
+            if(mood.equals("")){
+                throw new  MoodAnalysisException("Value cannot be empty");
             }
             if (mood.equals("I am in sad Mood")) {
                 return "SAD";
@@ -23,9 +26,7 @@ public class MoodAnalyser {
             if(mood.equals("I am in happy Mood")) {
                return "HAPPY";
             }
-        } catch (NullPointerException e) {
-            return "Happy";
-        }
+
 return "";
     }
 }
