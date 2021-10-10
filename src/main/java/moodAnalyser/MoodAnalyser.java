@@ -16,12 +16,12 @@ public class MoodAnalyser {
         try {
             if (mood.equals("I am in sad Mood")) {
                 return "SAD";
-            } else {
+            } else if(mood.equals("I am in happy Mood")) {
                return "HAPPY";
             }
         } catch (NullPointerException e) {
             return "Happy";
         }
-
+return "";
     }
 }
