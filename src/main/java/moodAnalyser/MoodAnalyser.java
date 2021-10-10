@@ -6,18 +6,22 @@ public class MoodAnalyser {
     public MoodAnalyser(String mood) {
         this.mood = mood;
     }
+
     public MoodAnalyser() {
 
     }
 
-    public String analyseMood(){
-if(mood.equals("I am in sad Mood")){
-    return "SAD";
+    public String analyseMood() {
 
-}
-else{
-    return "HAPPY";
-}
+        try {
+            if (mood.equals("I am in sad Mood")) {
+                return "SAD";
+            } else {
+               return "HAPPY";
+            }
+        } catch (NullPointerException e) {
+            return "Happy";
+        }
 
     }
 }
