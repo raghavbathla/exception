@@ -5,7 +5,9 @@ public class MoodAnalyser {
 if(mood.equals("I am in sad Mood")){
     return "SAD";
 
-
+}
+else{
+    return "HAPPY"
 }
 
     }
